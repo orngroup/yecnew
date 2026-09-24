@@ -270,3 +270,43 @@ svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2}
 .nav-dl:hover{border-color:var(--blue);color:var(--blue)}
 .nav-dl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
 @media(max-width:1000px){.nav-dl{margin:1.1rem 0 0;justify-content:center;width:100%;padding:.9rem}}
+
+/* accreditation logo walls */
+.logo-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:1rem}
+.logo-wall.home-strip{grid-template-columns:1fr 1fr}
+.logo-tile{background:#fff;border:1px solid var(--line);border-radius:12px;height:118px;display:flex;align-items:center;justify-content:center;padding:1.1rem;transition:transform .25s var(--ease),box-shadow .25s,border-color .2s}
+.logo-tile:hover{transform:translateY(-3px);border-color:var(--blue-l);box-shadow:0 12px 26px rgba(20,30,40,.1)}
+.logo-tile img{max-width:100%;max-height:100%;object-fit:contain}
+.cred{display:flex;flex-direction:column}
+.cred .clogo{height:52px;margin-bottom:.9rem;display:flex;align-items:center}
+.cred .clogo img{max-height:52px;max-width:140px;object-fit:contain}
+.cred h3{padding-right:6.6rem}
+
+/* careers role accordion */
+.roles-acc{border-top:2px solid var(--dark)}
+.role-item{border-bottom:1px solid var(--line);scroll-margin-top:120px}
+.role-btn{width:100%;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--body);color:var(--dark);display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.5rem .3rem;transition:color .2s}
+.role-btn:hover{color:var(--blue)}
+.role-btn .rt{display:flex;flex-direction:column;gap:.32rem;min-width:0}
+.role-btn .rname{font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.5vw,1.5rem)}
+.role-btn .rmeta{font-size:.9rem;color:var(--muted);display:flex;gap:.9rem;flex-wrap:wrap}
+.role-btn .rmeta b{color:var(--blue);font-weight:600}
+.role-btn .rp{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);position:relative;flex:none;transition:.25s}
+.role-item.open .rp{background:var(--blue);border-color:var(--blue)}
+.role-btn .rp::before,.role-btn .rp::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:2px;background:var(--dark);transform:translate(-50%,-50%);transition:.3s}
+.role-btn .rp::after{transform:translate(-50%,-50%) rotate(90deg)}
+.role-item.open .rp::before,.role-item.open .rp::after{background:#fff}
+.role-item.open .rp::after{transform:translate(-50%,-50%)}
+.role-body{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.role-in{padding:0 .3rem 1.9rem;max-width:940px}
+.role-in>p{color:var(--muted);margin:0 0 1.4rem;font-size:1.02rem}
+.role-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;margin-bottom:1.5rem}
+@media(max-width:700px){.role-cols{grid-template-columns:1fr;gap:1.2rem}}
+.role-cols h4{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin:0 0 .7rem}
+.role-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.role-cols li{display:flex;gap:.55rem;align-items:flex-start;font-size:.94rem;color:var(--text)}
+.role-cols li svg{width:18px;height:18px;color:var(--verify);flex:none;margin-top:2px;stroke-width:2.4;fill:none}
+@media (prefers-reduced-motion:reduce){.role-body{transition:none}}
+
+/* AFC separation on social page */
+.afc-divide{height:1px;background:var(--line);margin-bottom:clamp(2.4rem,5vw,3.6rem)}
